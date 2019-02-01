@@ -42,6 +42,9 @@
 *.idb
 *.pdb
 
+# ude report files
+__connection_failed_report*
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
