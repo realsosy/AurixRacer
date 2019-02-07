@@ -1,3 +1,9 @@
+/src/Projects/AurixRacer_AK_TC23A/2_Out/Tricore_Gnuc
+/src/Projects/AurixRacer_AK_TC23A/1_ToolEnv/0_Build/9_Make
+
+/src/Projects/AurixRacer_SB_TC27D/2_Out/Tricore_Gnuc
+/src/Projects/AurixRacer_SB_TC27D/1_ToolEnv/0_Build/9_Make
+
 # Prerequisites
 *.d
 
