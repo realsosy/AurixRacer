@@ -208,7 +208,7 @@ void welcomeScreen(App_AsclinShellInterface *app, IfxStdIf_DPipe *io)
 {
     IfxStdIf_DPipe_print(io, ENDL ""ENDL);
     IfxStdIf_DPipe_print(io, "******************************************************************************"ENDL);
-    IfxStdIf_DPipe_print(io, "*******  Welcome to Infineon Racer Shell                               *******"ENDL);
+    IfxStdIf_DPipe_print(io, "*******  Welcome to Aurix Racer Shell                               *******"ENDL);
     IfxStdIf_DPipe_print(io, "******************************************************************************"ENDL);
     IfxStdIf_DPipe_print(io, "*******  Software Version Date : %4X/%2X/%2X                            *******"ENDL, app->info.srcRevDate >> 16, (app->info.srcRevDate >> 8) & 0xFF, (app->info.srcRevDate & 0xFF));
     IfxStdIf_DPipe_print(io, "*******  Software Version      : %2d.%02d                                 *******"ENDL, (app->info.srcRev >> 8) & 0xFF, (app->info.srcRev >> 0) & 0xFF);
@@ -627,7 +627,12 @@ void initSerialInterface(void)
 {
     {   /** - Serial interface */
         IfxAsclin_Asc_Config config;
+
+#if SHELL_ASCLIN == ASCLIN0
         IfxAsclin_Asc_initModuleConfig(&config, &MODULE_ASCLIN0);
+#elif SHELL_ASCLIN == ASCLIN3
+        IfxAsclin_Asc_initModuleConfig(&config, &MODULE_ASCLIN3);
+#endif
         config.baudrate.baudrate             = CFG_ASC0_BAUDRATE;
         config.baudrate.oversampling         = IfxAsclin_OversamplingFactor_16;
         config.bitTiming.medianFilter        = IfxAsclin_SamplesPerBit_three;

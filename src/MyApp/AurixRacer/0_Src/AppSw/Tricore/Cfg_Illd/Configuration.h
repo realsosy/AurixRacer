@@ -21,11 +21,16 @@
 #define APPLICATION_KIT_TC237 	1
 #define SHIELD_BUDDY 			2
 
+/* SHELL_ASCLIN assign, ASCLIN0 혹은 ASCLIN3 중에 한가지만 선택 */
+#define ASCLIN0			0		// For HC06 Bluetooth module
+#define ASCLIN3			3		// For USB
+#define SHELL_ASCLIN	ASCLIN3
+
 /* 다음 3개중의 하나만 정의해서 사용*/
-#define CODE_HAND	0		// Hand code : default
-#define CODE_ERT	1		// Using embedded coder
-#define CODE_SCILAB	2		// Using SciLab
-#define CODE  CODE_HAND
+#define CODE_HAND		0		// Hand code : default
+#define CODE_ERT		1		// Using embedded coder
+#define CODE_SCILAB		2		// Using SciLab
+#define CODE  			CODE_HAND
 
 
 #if BOARD == APPLICATION_KIT_TC237
@@ -115,8 +120,14 @@
 	#define CFG_ASC0_RX_BUFFER_SIZE (512)                        /**< \brief Define the Rx buffer size in byte. */
 	#define CFG_ASC0_TX_BUFFER_SIZE (6 * 1024)                   /**< \brief Define the Tx buffer size in byte. */
 	/** \} */
+
+#if SHELL_ASCLIN == ASCLIN0
 	#define SHELL_RX        IfxAsclin0_RXB_P15_3_IN
 	#define SHELL_TX        IfxAsclin0_TX_P15_2_OUT
+#elif SHELL_ASCLIN == ASCLIN3
+	#define SHELL_RX        IfxAsclin3_RXD_P32_2_IN
+	#define SHELL_TX        IfxAsclin3_TX_P15_7_OUT
+#endif
 
 	#define M_TRIGGER					IfxGtm_TOM0_11_TOUT3_P02_3_OUT
 	#define M11_IN						IfxGtm_TOM0_12_TOUT4_P02_4_OUT
