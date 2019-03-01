@@ -11,13 +11,6 @@
 - [AurixTutorial Source Code](https://github.com/realsosy/AurixTutorial)
 - [AurixTutorial Documentation](http://aurixtutorial.readthedocs.io/ko/latest/) 
 
-## Definitions, Terminology and Abbreviations
-
-| Abbreviations | Descriptions                                                 |
-| ------------- | ------------------------------------------------------------ |
-| iLLD          | Infineon Low-Level Driver                                    |
-| BIFACES       | Build and Integration Framework for Automotive Controller Embedded Software |
-
 ## Supporting AURIX Board
 
 - ApplicationKit_TC237
