@@ -1,0 +1,14 @@
+site_name: AurixRacer
+
+pages:
+- Home: 'index.md'
+- Getting Started: GettingStarted.md
+- InfineonRacer User Guide: InfineonRacerUserGuide.md
+- Connection Guide for InfineonRacer: ConnectionGuide.md
+
+theme: readthedocs
+
+extra_javascript:
+    - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+use_directory_urls: false
