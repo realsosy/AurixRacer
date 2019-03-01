@@ -2,7 +2,7 @@ site_name: AurixRacer
 
 pages:
 - Home: 'index.md'
-- InfineonRacer Guide:
+- AurixRacer Guide:
     - Getting Started: GettingStarted.md
     - User Guide: UserGuide.md
     - Connection Guide: ConnectionGuide.md
