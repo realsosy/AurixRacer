@@ -90,7 +90,11 @@ Basic_GtmTomSrv g_GtmTomSrvScan = {
 
 IR_Motor_t IR_Motor = {
 		.Motor0Vol = 0.0,
+#if BOARD == APPLICATION_KIT_TC237
 		.Motor1Vol = 0.0
+#elif BOARD == SHIELD_BUDDY
+
+#endif
 };
 
 IR_Srv_t IR_Srv = {
@@ -330,8 +334,12 @@ void GtmTomPwmHl_run(void){
     IfxGtm_Tom_Timer *timer = &g_GtmTomPwmHl.drivers.timer;
     Ifx_TimerValue halfPeriod = (g_GtmTomPwmHl.pwmPeriod /2);
 
-    g_GtmTomPwmHl.tOn[0] =  halfPeriod * IR_Motor.Motor0Vol + halfPeriod;
-    g_GtmTomPwmHl.tOn[1] =  halfPeriod * IR_Motor.Motor1Vol + halfPeriod;
+    g_GtmTomPwmHl.tOn[0] =  halfPeriod + halfPeriod * IR_Motor.Motor0Vol;
+#if BOARD == APPLICATION_KIT_TC237
+    g_GtmTomPwmHl.tOn[1] =  halfPeriod + halfPeriod * IR_Motor.Motor1Vol;
+#elif BOARD == SHIELD_BUDDY
+    g_GtmTomPwmHl.tOn[1] =  halfPeriod - halfPeriod * IR_Motor.Motor0Vol;
+#endif
 
     /* Set PWM duty */
 	IfxGtm_Tom_PwmHl_setMode(pwmHl, Ifx_Pwm_Mode_centerAligned);
@@ -420,16 +428,6 @@ void IR_setMotor0Vol(float32 vol){
 	IR_Motor.Motor0Vol = vol;
 }
 
-void IR_setMotor1Vol(float32 vol){
-	if(vol > 1.0){
-		vol = 1.0;
-	}
-	else if(vol <-1.0){
-		vol = -1.0;
-	}
-	IR_Motor.Motor1Vol = vol;
-}
-
 void IR_setSrvAngle(float32 angle){
 	if(angle > 1.0){
 		angle = 1.0;
@@ -441,6 +439,16 @@ void IR_setSrvAngle(float32 angle){
 }
 
 #if BOARD == APPLICATION_KIT_TC237
+void IR_setMotor1Vol(float32 vol){
+	if(vol > 1.0){
+		vol = 1.0;
+	}
+	else if(vol <-1.0){
+		vol = -1.0;
+	}
+	IR_Motor.Motor1Vol = vol;
+}
+
 void IR_setBeeperOn(boolean beeper){
 	if(beeper != FALSE){
 		beeper = TRUE;

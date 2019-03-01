@@ -79,14 +79,10 @@ IFX_EXTERN void IR_setBeeperVol(float32 volume);
 /*-----------------------------------Macros-----------------------------------*/
 /******************************************************************************/
 #define IR_getMotor0Vol() IR_Motor.Motor0Vol
-#define IR_getMotor1Vol() IR_Motor.Motor1Vol
 
 #define IR_getSrvAngle() 	IR_Srv.Angle
 #define IR_getSrvScanAngle() 	IR_SrvScan.Angle
 
-//#define IR_getBeeperOn() 	IR_Beeper.On
-//#define IR_getBeeperFreq() 	IR_Beeper.Frequency
-//#define IR_getBeeperVol()  	IR_Beeper.Volume
 /******************************************************************************/
 /*--------------------------------Enumerations--------------------------------*/
 /******************************************************************************/
@@ -98,7 +94,6 @@ IFX_EXTERN void IR_setBeeperVol(float32 volume);
 /******************************************************************************/
 typedef struct{
 	float32 Motor0Vol;
-	float32 Motor1Vol;
 }IR_Motor_t;
 
 typedef struct{

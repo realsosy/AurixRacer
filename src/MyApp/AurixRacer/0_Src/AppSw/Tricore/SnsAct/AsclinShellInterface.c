@@ -110,7 +110,6 @@ const Ifx_Shell_Command AppShell_commands[] = {
 const Ifx_Shell_Command AppShell_commands[] = {
     {"status", "   : Show the application status", &g_AsclinShellInterface,       &AppShell_status,    },
     {"m0v", "      : Motor0Vol", &g_AsclinShellInterface,       &AppShell_motor0vol,    },
-    {"m1v", "      : Motor1Vol", &g_AsclinShellInterface,       &AppShell_motor1vol,    },
     {"m0e", "      : Motor0Enable", &g_AsclinShellInterface,       &AppShell_motor0en,    },
     {"srv", "      : Servo Angle", &g_AsclinShellInterface,       &AppShell_srv,    },
     {"srvscan", "  : ServoScan Angle", &g_AsclinShellInterface,       &AppShell_srvscan,    },
@@ -264,7 +263,6 @@ boolean AppShell_status(pchar args, void *data, IfxStdIf_DPipe *io)
 	AppShell_port00_1(0, NULL_PTR, &g_AsclinShellInterface.stdIf.asc );
 #elif BOARD == SHIELD_BUDDY
 	AppShell_motor0vol(0, NULL_PTR, &g_AsclinShellInterface.stdIf.asc );
-	AppShell_motor1vol(0, NULL_PTR, &g_AsclinShellInterface.stdIf.asc );
 	AppShell_motor0en(0, NULL_PTR, &g_AsclinShellInterface.stdIf.asc );
 	AppShell_srv(0, NULL_PTR, &g_AsclinShellInterface.stdIf.asc );
 	AppShell_srvscan(0, NULL_PTR, &g_AsclinShellInterface.stdIf.asc );
@@ -298,6 +296,8 @@ boolean AppShell_motor0vol(pchar args, void *data, IfxStdIf_DPipe *io)
     return TRUE;
 }
 
+#if BOARD == APPLICATION_KIT_TC237
+
 boolean AppShell_motor1vol(pchar args, void *data, IfxStdIf_DPipe *io)
 {
 	float32 vol;
@@ -315,6 +315,7 @@ boolean AppShell_motor1vol(pchar args, void *data, IfxStdIf_DPipe *io)
 
     return TRUE;
 }
+#endif
 
 boolean AppShell_motor0en(pchar args, void *data, IfxStdIf_DPipe *io)
 {

@@ -75,7 +75,9 @@ void ISR_IncrIncZero(void)
 void Gpt12Demo_init(void)
 {
     BasicGpt12Enc_init();
+#ifdef ENCODER_EMUL
     EncoderEmul_init();
+#endif
 }
 void BasicGpt12Enc_init(void)
 {
@@ -190,6 +192,7 @@ EncEmul_t g_EncEmul;
 /*-------------------------Function Prototypes--------------------------------*/
 /******************************************************************************/
 
+void EncoderEmul_init(void);
 void EncoderEmul_step(void);
 
 /******************************************************************************/
