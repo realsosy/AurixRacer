@@ -3,8 +3,8 @@ site_name: AurixRacer
 pages:
 - Home: 'index.md'
 - Getting Started: GettingStarted.md
-- InfineonRacer User Guide: InfineonRacerUserGuide.md
-- Connection Guide for InfineonRacer: ConnectionGuide.md
+- User Guide: UserGuide.md
+- Connection Guide: ConnectionGuide.md
 
 theme: readthedocs
 
