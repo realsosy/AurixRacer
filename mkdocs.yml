@@ -6,6 +6,8 @@ pages:
     - Getting Started: GettingStarted.md
     - User Guide: UserGuide.md
     - Connection Guide: ConnectionGuide.md
+    - Simulink as a Programming Language: SimulinkAsAProgrammingLanguage.md
+
 
 theme: readthedocs
 
