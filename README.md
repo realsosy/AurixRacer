@@ -1,4 +1,4 @@
-# AurixRacer
+# [AurixRacer](./docs/index.md)
 ## Purpose & Scope
 
 * 지능형 모형차 대회에 사용할 수 있는 Software Platform 을 제공
@@ -6,9 +6,9 @@
 
 ## Links
 
-- [AurixRacer Source Code](https://github.com/realsosy/AurixRacer)
+- [AurixRacer Source Code](https://github.com/realsosy/AurixRacer/src)
 - [AurixRacer Documentation](http://aurixracer.readthedocs.io/ko/latest/) 
-- [AurixTutorial Source Code](https://github.com/realsosy/AurixTutorial)
+- [AurixTutorial Source Code](https://github.com/realsosy/AurixTutorial/src)
 - [AurixTutorial Documentation](http://aurixtutorial.readthedocs.io/ko/latest/) 
 
 ## Supporting AURIX Board
