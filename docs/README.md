@@ -1,3 +1,3 @@
 # README
 
-[AurixRacer](./index.md)
+Jump to [AurixRacer](./index.md)

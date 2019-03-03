@@ -6,9 +6,9 @@
 
 ## Links
 
-- [AurixRacer Source Code](https://github.com/realsosy/AurixRacer/src)
+- [AurixRacer Source Code](https://github.com/realsosy/AurixRacer/)
 - [AurixRacer Documentation](http://aurixracer.readthedocs.io/ko/latest/) 
-- [AurixTutorial Source Code](https://github.com/realsosy/AurixTutorial/src)
+- [AurixTutorial Source Code](https://github.com/realsosy/AurixTutorial/)
 - [AurixTutorial Documentation](http://aurixtutorial.readthedocs.io/ko/latest/) 
 
 ## Supporting AURIX Board
