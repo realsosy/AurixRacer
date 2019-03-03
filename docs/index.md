@@ -72,11 +72,11 @@ Software Platform를 분석하면 자연스럽게 Infineon AURIX를 이해할 �
 - AurixRacer의 코드만 참고하실 것이라면 이 파트만 살펴보면 됩니다.
 - 활용에 필요한 필수적인 정보들만 모아 놓았습니다.
 
-1. [Getting Started](./docs/GettingStarted.md)  HW Setup & Quick-Start
-2. [AurixRacer User Guide](./docs/UserGuide.md)  SW Architecture & API
-3. [Simulink as a Programming Language](./docs/SimulinkAsAProgrammingLanguage.md)
+1. [Getting Started](./GettingStarted.md)  HW Setup & Quick-Start
+2. [AurixRacer User Guide](./UserGuide.md)  SW Architecture & API
+3. [Simulink as a Programming Language](./SimulinkAsAProgrammingLanguage.md)
 
-- [Connection Guide for AurixRacer](./docs/ConnectionGuide.md)
+- [Connection Guide for AurixRacer](./ConnectionGuide.md)
 - [Pins & API](./docs/PinsApi.xlsx)
 
 
