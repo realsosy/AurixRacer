@@ -67,8 +67,9 @@ date: 2018-04-10
 
 ### BIFACES Installation
 
-* [**BIFACES_V1_0_2_Win32.exe**](https://drive.google.com/open?id=120INrMwqaR8812rFyFHspgbCLmoi7d-T) or [**BIFACES_V1_0_2_Win64.exe**](https://drive.google.com/open?id=1z80W66QcE_DNJBaRRdcr3tfRu9EoZ8Oz)
-    * BIFACES_V1_0_2_WinXX.exe 실행
+* [**BIFACES_V1_0_2_Win32.exe**](https://drive.google.com/open?id=120INrMwqaR8812rFyFHspgbCLmoi7d-T)
+
+    * BIFACES_V1_0_2_Win32.exe 실행
 
     * *Select Components* 에서 *Full installation* 선택 후 설치 진행
 
