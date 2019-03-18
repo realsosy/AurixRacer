@@ -8,7 +8,7 @@ date: 2018-04-10
 
 ## Objectives
 * 개발환경을 설치하고
-* InfineonRacer 코드를 다운 받아 빌드하고
+* AurixRacer 코드를 다운 받아 빌드하고
 * 각종 IO를 연결하여 동작 여부를 확인한다.
 
 ## References
@@ -122,12 +122,12 @@ date: 2018-04-10
 
 * Workspace 설정
     * 소스코드를 포함한 프로젝트를 관리 할 폴더 설정
-    * 새로 만든 Workspace에 *src* 폴더 *(~\InfineonRacer-master\src)* 를 복사 또는 이동 하거나
+    * 새로 만든 Workspace에 *src* 폴더 *(~\AurixRacer-master\src)* 를 복사 또는 이동 하거나
     * *src* 폴더를 Workspace로 지정
 
  ![GettingStarted_05Workspace](images/GettingStarted_05Workspace.png)
 
-* 다운로드 받은  *InfineonRacer* 프로젝트 Import
+* 다운로드 받은  *AurixRacer* 프로젝트 Import
     * **File** >> **Import** 클릭
 
  ![GettingStarted_06Import](images/GettingStarted_06Import.png)
@@ -140,8 +140,8 @@ date: 2018-04-10
 
  ![GettingStarted_08Select](images/GettingStarted_08Select.png)
 
-* *Projects* 탭에서 **InfineonRacer_TC23A** 체크박스 선택 후 **Finish** 클릭
-    * 다른 프로젝트는 *InfineonRacer* 에서 다루는 각각의 [모듈기능](https://github.com/realsosy/InfineonRacer#dive-into-aurix-world-using-infineonracer) 으로 나누어져 있음
+* *Projects* 탭에서 **AurixRacer_TC27D** 체크박스 선택 후 **Finish** 클릭
+    * 다른 프로젝트는 *AurixRacer* 에서 다루는 각각의 [모듈기능](https://github.com/realsosy/InfineonRacer#dive-into-aurix-world-using-infineonracer) 으로 나누어져 있음
 
  ![GettingStarted_09Project](images/GettingStarted_09Project.png)  
 
