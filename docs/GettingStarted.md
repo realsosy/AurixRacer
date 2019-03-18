@@ -70,13 +70,15 @@ date: 2018-04-10
 
 * [**BIFACES_V1_0_2_Win32.exe**](https://drive.google.com/open?id=120INrMwqaR8812rFyFHspgbCLmoi7d-T)
 
+    * 참고로 [**BIFACES_V1_0_2_Win64.exe**](https://drive.google.com/open?id=1z80W66QcE_DNJBaRRdcr3tfRu9EoZ8Oz) 설치하여 사용하는 것도 가능하지만, Bifaces/eclipse/eclipse.ini 에서 자바가 설치된 디렉토리를 설정해주는 추가 작업 필요 
+    
     * BIFACES_V1_0_2_Win32.exe 실행
 
     * *Select Components* 에서 *Full installation* 선택 후 설치 진행
 
  ![GettingStarted_03BIFACES](images/GettingStarted_03BIFACES.png)
 
-* 설치 완료 후 **StartBifaces.bat** *(C:\Tools\BifacesTools)*  파일을 실행
+* 설치 완료 후 **StartBifaces.bat** *(C:\Tools\BifacesWin32)*  파일을 실행
     * **.bat** file 실행 화면 (Workspace는 defualt 값 사용)
 
  ![GettingStarted_BiWelcome](images/GettingStarted_BiWelcome.png)
@@ -120,7 +122,7 @@ date: 2018-04-10
 
  ![GettingStarted_SourceCode](images/GettingStarted_SourceCode.png)
 
-* *BIFACES* 실행 (**StartBifaces.bat** *(C:\Tools\BifacesTools)* 실행)  
+* *BIFACES* 실행 (**StartBifaces.bat** *(C:\Tools\BifacesWin32)* 실행)  
 
 * Workspace 설정
     * 소스코드를 포함한 프로젝트를 관리 할 폴더 설정
