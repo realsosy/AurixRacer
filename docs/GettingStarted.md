@@ -48,6 +48,7 @@ date: 2018-04-10
 
 * [Tricore tool chain 홈페이지](http://free-entry-toolchain.hightec-rt.com/index.php)에서 개인 정보 입력 후 Generate License File & Download 버튼 클릭
     * 이때 입력한 개인정보는 HighTec 다운로드 완료 후 License 인증 시 필요
+    * 다운로드 완료한 "license.lic" 파일은 "C:\HighTec\licenses"로 복사 
 
  ![GettingStarted_01Hightec](images/GettingStarted_01Hightec.png)
 
