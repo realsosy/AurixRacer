@@ -90,6 +90,7 @@ void BasicPort_init(void)
 	setOutputPin(LED2.port, LED2.pinIndex, IR_Port.led0);
 
     /* Motor Port output */
+#if BOARD == APPLICATION_KIT_TC237
     IfxPort_setPinMode(M11_INH.port, M11_INH.pinIndex, IfxPort_Mode_outputPushPullGeneral);
 	IfxPort_setPinPadDriver(M11_INH.port, M11_INH.pinIndex, IfxPort_PadDriver_cmosAutomotiveSpeed1);
 	setOutputPin(M11_INH.port, M11_INH.pinIndex, IR_Port.m11_inh);
@@ -98,7 +99,6 @@ void BasicPort_init(void)
 	IfxPort_setPinPadDriver(M12_INH.port, M12_INH.pinIndex, IfxPort_PadDriver_cmosAutomotiveSpeed1);
 	setOutputPin(M12_INH.port, M12_INH.pinIndex, IR_Port.m12_inh);
 
-#if BOARD == APPLICATION_KIT_TC237
     IfxPort_setPinMode(M21_INH.port, M21_INH.pinIndex, IfxPort_Mode_outputPushPullGeneral);
 	IfxPort_setPinPadDriver(M21_INH.port, M21_INH.pinIndex, IfxPort_PadDriver_cmosAutomotiveSpeed1);
 	setOutputPin(M21_INH.port, M21_INH.pinIndex, IR_Port.m21_inh);
@@ -106,6 +106,18 @@ void BasicPort_init(void)
     IfxPort_setPinMode(M22_INH.port, M22_INH.pinIndex, IfxPort_Mode_outputPushPullGeneral);
 	IfxPort_setPinPadDriver(M22_INH.port, M22_INH.pinIndex, IfxPort_PadDriver_cmosAutomotiveSpeed1);
 	setOutputPin(M22_INH.port, M22_INH.pinIndex, IR_Port.m22_inh);
+#elif BOARD == SHIELD_BUDDY
+    IfxPort_setPinMode(M_INH_U.port, M_INH_U.pinIndex, IfxPort_Mode_outputPushPullGeneral);
+	IfxPort_setPinPadDriver(M_INH_U.port, M_INH_U.pinIndex, IfxPort_PadDriver_cmosAutomotiveSpeed1);
+	setOutputPin(M_INH_U.port, M_INH_U.pinIndex, IR_Port.m_inh_u);
+
+    IfxPort_setPinMode(M_INH_V.port, M_INH_V.pinIndex, IfxPort_Mode_outputPushPullGeneral);
+	IfxPort_setPinPadDriver(M_INH_V.port, M_INH_V.pinIndex, IfxPort_PadDriver_cmosAutomotiveSpeed1);
+	setOutputPin(M_INH_V.port, M_INH_V.pinIndex, IR_Port.m_inh_v);
+
+    IfxPort_setPinMode(M_INH_W.port, M_INH_W.pinIndex, IfxPort_Mode_outputPushPullGeneral);
+	IfxPort_setPinPadDriver(M_INH_W.port, M_INH_W.pinIndex, IfxPort_PadDriver_cmosAutomotiveSpeed1);
+	setOutputPin(M_INH_W.port, M_INH_W.pinIndex, IR_Port.m_inh_w);
 #endif
 
 	/* Digital Input */
@@ -132,11 +144,15 @@ void BasicPort_run(void)
 	setOutputPin(LED2.port, LED2.pinIndex, IR_Port.led2);
 
     /* Motor output */
-	setOutputPin(M11_INH.port, M11_INH.pinIndex, IR_MotorEn.Motor0Enable);
-	setOutputPin(M12_INH.port, M12_INH.pinIndex, IR_MotorEn.Motor0Enable);
 #if BOARD == APPLICATION_KIT_TC237
-	setOutputPin(M21_INH.port, M21_INH.pinIndex, IR_MotorEn.Motor1Enable);
-	setOutputPin(M22_INH.port, M22_INH.pinIndex, IR_MotorEn.Motor1Enable);
+	setOutputPin(M11_INH.port, M11_INH.pinIndex, IR_Motor0En.Motor0Enable);
+	setOutputPin(M12_INH.port, M12_INH.pinIndex, IR_Motor0En.Motor0Enable);
+	setOutputPin(M21_INH.port, M21_INH.pinIndex, IR_Motor0En.Motor1Enable);
+	setOutputPin(M22_INH.port, M22_INH.pinIndex, IR_Motor0En.Motor1Enable);
+#elif BOARD == SHIELD_BUDDY
+	setOutputPin(M_INH_U.port, M_INH_U.pinIndex, IR_Port.m_inh_u);
+	setOutputPin(M_INH_V.port, M_INH_V.pinIndex, IR_Port.m_inh_v);
+	setOutputPin(M_INH_W.port, M_INH_W.pinIndex, IR_Port.m_inh_w);
 #endif
 	/* Digital Input */
 	IR_Port.port00_0 =  IfxPort_getPinState(PORT00_0.port, PORT00_0.pinIndex);
@@ -148,6 +164,9 @@ void IR_setMotor0En(boolean enable){
 		enable = TRUE;
 	}
 	IR_MotorEn.Motor0Enable = enable;
+	IR_Port.m_inh_u = enable;
+	IR_Port.m_inh_v = enable;
+	IR_Port.m_inh_w = enable;
 }
 
 #if BOARD == APPLICATION_KIT_TC237
@@ -155,7 +174,7 @@ void IR_setMotor1En(boolean enable){
 	if(enable != FALSE){
 		enable = TRUE;
 	}
-	IR_MotorEn.Motor1Enable = enable;
+	IR_Motor0En.Motor1Enable = enable;
 }
 #endif
 

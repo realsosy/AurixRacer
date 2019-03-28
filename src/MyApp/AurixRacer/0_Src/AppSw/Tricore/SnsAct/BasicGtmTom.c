@@ -33,7 +33,11 @@ typedef struct
 typedef struct
 {
     Ifx_TimerValue    pwmPeriod;
+#if BOARD == APPLICATION_KIT_TC237
     Ifx_TimerValue    tOn[2];  /**< \brief PwmHl onTime value */
+#elif BOARD == SHIELD_BUDDY
+    Ifx_TimerValue    tOn[3];  /**< \brief PwmHl onTime value */
+#endif
     struct
     {
         IfxGtm_Tom_Timer timer;        /**< \brief Timer driver */
@@ -88,14 +92,20 @@ Basic_GtmTomSrv g_GtmTomSrvScan = {
 };
 #endif
 
+#if BOARD == APPLICATION_KIT_TC237
 IR_Motor_t IR_Motor = {
 		.Motor0Vol = 0.0,
-#if BOARD == APPLICATION_KIT_TC237
 		.Motor1Vol = 0.0
+};
 #elif BOARD == SHIELD_BUDDY
+IR_Motor_t IR_Motor = {
+		.Motor0Vol = 0.0,
+		.Motor0VolU = 0.0,
+		.Motor0VolV = 0.0,
+		.Motor0VolW = 0.0
+};
 
 #endif
-};
 
 IR_Srv_t IR_Srv = {
 		.Angle = 0.0
@@ -153,6 +163,7 @@ void GtmTomPwmHl_initTimer(void)
 
         IfxGtm_Tom_PwmHl_initConfig(&pwmHlConfig);
 
+#if BOARD == APPLICATION_KIT_TC237
         IfxGtm_Tom_ToutMapP ccx[2], coutx[2];
         ccx[0]		= &M11_IN;
         coutx[0]	= &M12_IN;
@@ -171,6 +182,29 @@ void GtmTomPwmHl_initTimer(void)
         pwmHlConfig.base.coutxActiveState = Ifx_ActiveState_high;
         pwmHlConfig.ccx                   = ccx;
         pwmHlConfig.coutx                 = coutx;
+
+#elif BOARD == SHIELD_BUDDY
+        IfxGtm_Tom_ToutMapP ccx[3], coutx[3];
+        ccx[0]		= &M_IN_UT;
+        coutx[0]	= &M_IN_UB;
+        ccx[1]		= &M_IN_VT;
+        coutx[1]	= &M_IN_VB;
+        ccx[2]		= &M_IN_WT;
+        coutx[2]	= &M_IN_WB;
+
+        pwmHlConfig.timer                 = &g_GtmTomPwmHl.drivers.timer;
+        pwmHlConfig.tom                   = timerConfig.tom;
+        pwmHlConfig.base.deadtime         = 0.0;
+        pwmHlConfig.base.minPulse         = 1e-6;
+        pwmHlConfig.base.channelCount     = 3;
+        pwmHlConfig.base.emergencyEnabled = FALSE;
+        pwmHlConfig.base.outputMode       = IfxPort_OutputMode_pushPull;
+        pwmHlConfig.base.outputDriver     = IfxPort_PadDriver_cmosAutomotiveSpeed1;
+        pwmHlConfig.base.ccxActiveState   = Ifx_ActiveState_high;
+        pwmHlConfig.base.coutxActiveState = Ifx_ActiveState_high;
+        pwmHlConfig.ccx                   = ccx;
+        pwmHlConfig.coutx                 = coutx;
+#endif
 
         IfxGtm_Tom_PwmHl_init(&g_GtmTomPwmHl.drivers.pwm, &pwmHlConfig);
 
@@ -294,13 +328,22 @@ void BasicGtmTom_init(void)
     }
 
     /** - Initialise the GtmTomPwmHl part */
+#if BOARD == APPLICATION_KIT_TC237
     {
     	GtmTomPwmHl_initTimer();
 		g_GtmTomPwmHl.pwmPeriod =  IfxGtm_Tom_Timer_getPeriod(&g_GtmTomPwmHl.drivers.timer);
 		g_GtmTomPwmHl.tOn[0] = g_GtmTomPwmHl.pwmPeriod /2;
 		g_GtmTomPwmHl.tOn[1] = g_GtmTomPwmHl.pwmPeriod /2;
     }
-
+#elif BOARD == SHIELD_BUDDY
+    {
+    	GtmTomPwmHl_initTimer();
+		g_GtmTomPwmHl.pwmPeriod =  IfxGtm_Tom_Timer_getPeriod(&g_GtmTomPwmHl.drivers.timer);
+		g_GtmTomPwmHl.tOn[0] = g_GtmTomPwmHl.pwmPeriod /2;
+		g_GtmTomPwmHl.tOn[1] = g_GtmTomPwmHl.pwmPeriod /2;
+		g_GtmTomPwmHl.tOn[2] = g_GtmTomPwmHl.pwmPeriod /2;
+    }
+#endif
     /** - Initialise the GTM part */
     {
     	GtmTomSrv_initTimer();
@@ -334,11 +377,16 @@ void GtmTomPwmHl_run(void){
     IfxGtm_Tom_Timer *timer = &g_GtmTomPwmHl.drivers.timer;
     Ifx_TimerValue halfPeriod = (g_GtmTomPwmHl.pwmPeriod /2);
 
-    g_GtmTomPwmHl.tOn[0] =  halfPeriod + halfPeriod * IR_Motor.Motor0Vol;
 #if BOARD == APPLICATION_KIT_TC237
-    g_GtmTomPwmHl.tOn[1] =  halfPeriod + halfPeriod * IR_Motor.Motor1Vol;
-#elif BOARD == SHIELD_BUDDY
+    g_GtmTomPwmHl.tOn[0] =  halfPeriod + halfPeriod * IR_Motor.Motor0Vol;
     g_GtmTomPwmHl.tOn[1] =  halfPeriod - halfPeriod * IR_Motor.Motor0Vol;
+#elif BOARD == SHIELD_BUDDY
+    IR_Motor.Motor0VolU = IR_Motor.Motor0Vol;
+    IR_Motor.Motor0VolV = -1.0 * IR_Motor.Motor0Vol;
+    //IR_Motor.Motor0VolW = IR_Motor.Motor0Vol;
+    g_GtmTomPwmHl.tOn[0] =  halfPeriod + halfPeriod * IR_Motor.Motor0VolU;
+    g_GtmTomPwmHl.tOn[1] =  halfPeriod + halfPeriod * IR_Motor.Motor0VolV;
+    //g_GtmTomPwmHl.tOn[2] =  halfPeriod + halfPeriod * IR_Motor.Motor0VolW;
 #endif
 
     /* Set PWM duty */

@@ -129,25 +129,35 @@
 	#define SHELL_TX        IfxAsclin3_TX_P15_7_OUT
 #endif
 
-	#define M_TRIGGER					IfxGtm_TOM0_11_TOUT3_P02_3_OUT
-	#define M11_IN						IfxGtm_TOM0_12_TOUT4_P02_4_OUT
-	#define M12_IN						IfxGtm_TOM0_13_TOUT5_P02_5_OUT
-	#define M21_IN						IfxGtm_TOM0_14_TOUT6_P02_6_OUT
-	#define M22_IN						IfxGtm_TOM0_15_TOUT7_P02_7_OUT
+//BTN8982
+//	#define M_TRIGGER					IfxGtm_TOM0_11_TOUT3_P02_3_OUT
+//	#define M11_IN						IfxGtm_TOM0_12_TOUT4_P02_4_OUT
+//	#define M12_IN						IfxGtm_TOM0_13_TOUT5_P02_5_OUT
+//	#define M21_IN						IfxGtm_TOM0_14_TOUT6_P02_6_OUT
+//	#define M22_IN						IfxGtm_TOM0_15_TOUT7_P02_7_OUT
+//IFX007T
+	#define M_TRIGGER					IfxGtm_TOM0_0_TOUT77_P15_6_OUT
+	#define M_IN_UT						IfxGtm_TOM0_3_TOUT105_P10_3_OUT
+	#define M_IN_UB						IfxGtm_TOM0_4_TOUT22_P33_0_OUT
+	#define M_IN_VT						IfxGtm_TOM0_2_TOUT107_P10_5_OUT
+	#define M_IN_VB						IfxGtm_TOM0_5_TOUT23_P33_1_OUT
+	#define M_IN_WT						IfxGtm_TOM0_1_TOUT103_P10_1_OUT
+	#define M_IN_WB						IfxGtm_TOM0_6_TOUT24_P33_2_OUT
 
-	#define SRV							IfxGtm_TOM0_8_TOUT0_P02_0_OUT
-	#define SRV_SCAN                    IfxGtm_TOM0_9_TOUT1_P02_1_OUT
+	#define SRV							IfxGtm_TOM0_12_TOUT98_P11_9_OUT
+	#define SRV_SCAN                    IfxGtm_TOM0_13_TOUT99_P11_10_OUT
 
-	#define LED_TICK					IfxPort_P33_3
-	#define LED0						IfxPort_P33_0
-	#define LED1						IfxPort_P33_1
-	#define LED2						IfxPort_P33_2
+	#define LED_TICK					IfxPort_P10_2
+	#define LED0						IfxPort_P00_4
+	#define LED1						IfxPort_P00_3
+	#define LED2						IfxPort_P00_2
 
 	#define PORT00_0					IfxPort_P00_0
 	#define PORT00_1					IfxPort_P00_1
 
-	#define M11_INH						IfxPort_P10_1
-	#define M12_INH						IfxPort_P10_2
+	#define M_INH_U						IfxPort_P02_4
+	#define M_INH_V						IfxPort_P02_3
+	#define M_INH_W						IfxPort_P02_1
 
 	#define TSL1401_SI					IfxPort_P14_0
 	#define TSL1401_CLK					IfxPort_P14_1

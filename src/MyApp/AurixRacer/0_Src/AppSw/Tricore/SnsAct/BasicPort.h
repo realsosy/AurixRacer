@@ -13,6 +13,7 @@
 #include <Ifx_Types.h>
 #include <stdio.h>
 #include "Bsp.h"
+#include "Configuration.h"
 #include "ConfigurationIsr.h"
 #include "Cpu/Irq/IfxCpu_Irq.h"
 #include "IfxPort.h"
@@ -56,8 +57,9 @@ typedef struct
 	volatile boolean m21_inh;
 	volatile boolean m22_inh;
 #elif BOARD == SHIELD_BUDDY
-	volatile boolean m11_inh;
-	volatile boolean m12_inh;
+	volatile boolean m_inh_u;
+	volatile boolean m_inh_v;
+	volatile boolean m_inh_w;
 #endif
 } Basic_Port;
 

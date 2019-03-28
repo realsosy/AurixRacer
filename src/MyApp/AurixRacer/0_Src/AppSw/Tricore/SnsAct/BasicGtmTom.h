@@ -94,6 +94,9 @@ IFX_EXTERN void IR_setBeeperVol(float32 volume);
 /******************************************************************************/
 typedef struct{
 	float32 Motor0Vol;
+	float32 Motor0VolU;
+	float32 Motor0VolV;
+	float32 Motor0VolW;
 }IR_Motor_t;
 
 typedef struct{
@@ -111,7 +114,6 @@ IFX_EXTERN IR_Srv_t IR_SrvScan;
 /*-------------------------Function Prototypes--------------------------------*/
 /******************************************************************************/
 IFX_EXTERN void IR_setMotor0Vol(float32 vol);
-IFX_EXTERN void IR_setMotor1Vol(float32 vol);
 
 IFX_EXTERN void IR_setSrvAngle(float32 angle);
 IFX_EXTERN void IR_setSrvScanAngle(float32 angle);
