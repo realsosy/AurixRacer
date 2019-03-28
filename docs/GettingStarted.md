@@ -8,7 +8,7 @@ date: 2018-04-10
 
 ## Objectives
 * 개발환경을 설치하고
-* InfineonRacer 코드를 다운 받아 빌드하고
+* AurixRacer 코드를 다운 받아 빌드하고
 * 각종 IO를 연결하여 동작 여부를 확인한다.
 
 ## References
@@ -48,6 +48,7 @@ date: 2018-04-10
 
 * [Tricore tool chain 홈페이지](http://free-entry-toolchain.hightec-rt.com/index.php)에서 개인 정보 입력 후 Generate License File & Download 버튼 클릭
     * 이때 입력한 개인정보는 HighTec 다운로드 완료 후 License 인증 시 필요
+    * 다운로드 완료한 "license.lic" 파일은 "C:\HighTec\licenses"로 복사 
 
  ![GettingStarted_01Hightec](images/GettingStarted_01Hightec.png)
 
@@ -59,7 +60,7 @@ date: 2018-04-10
 
  (HighTec 설치 진행 중 **UDEVisualPlatfrom** 과 **CDM Driver Package HighTec** 가 설치됨)
 
-* 설치 완료 후 **Eclipse.exe** *(C:\HIGHTEC\ide\eclipse-v1.6.1)* , **UDEVisualPlatfrom.exe** *(C:\Program Files (x86)\pls\UDE Starterkit 4.8)* 실행 확인
+* 설치 완료 후 **Eclipse.exe** *(C:\HIGHTEC\ide\eclipse-v1.6.1)* , **UDEVisualPlatfrom.exe** *(C:\Program Files (x86)\pls\UDE Starterkit 4.10)* 실행 확인
 
     * **Eclipse** 실행화면 (Workspace는 defualt 값 사용)
 
@@ -67,14 +68,17 @@ date: 2018-04-10
 
 ### BIFACES Installation
 
-* [**BIFACES_V1_0_2_Win32.exe**](https://drive.google.com/open?id=120INrMwqaR8812rFyFHspgbCLmoi7d-T) or [**BIFACES_V1_0_2_Win64.exe**](https://drive.google.com/open?id=1z80W66QcE_DNJBaRRdcr3tfRu9EoZ8Oz)
-    * BIFACES_V1_0_2_WinXX.exe 실행
+* [**BIFACES_V1_0_2_Win32.exe**](https://drive.google.com/open?id=120INrMwqaR8812rFyFHspgbCLmoi7d-T)
+
+    * 참고로 [**BIFACES_V1_0_2_Win64.exe**](https://drive.google.com/open?id=1z80W66QcE_DNJBaRRdcr3tfRu9EoZ8Oz) 설치하여 사용하는 것도 가능하지만, Bifaces/eclipse/eclipse.ini 에서 자바가 설치된 디렉토리를 설정해주는 추가 작업 필요 
+    
+    * BIFACES_V1_0_2_Win32.exe 실행
 
     * *Select Components* 에서 *Full installation* 선택 후 설치 진행
 
  ![GettingStarted_03BIFACES](images/GettingStarted_03BIFACES.png)
 
-* 설치 완료 후 **StartBifaces.bat** *(C:\Tools\BifacesTools)*  파일을 실행
+* 설치 완료 후 **StartBifaces.bat** *(C:\Tools\BifacesWin32)*  파일을 실행
     * **.bat** file 실행 화면 (Workspace는 defualt 값 사용)
 
  ![GettingStarted_BiWelcome](images/GettingStarted_BiWelcome.png)
@@ -118,16 +122,16 @@ date: 2018-04-10
 
  ![GettingStarted_SourceCode](images/GettingStarted_SourceCode.png)
 
-* *BIFACES* 실행 (**StartBifaces.bat** *(C:\Tools\BifacesTools)* 실행)  
+* *BIFACES* 실행 (**StartBifaces.bat** *(C:\Tools\BifacesWin32)* 실행)  
 
 * Workspace 설정
     * 소스코드를 포함한 프로젝트를 관리 할 폴더 설정
-    * 새로 만든 Workspace에 *src* 폴더 *(~\InfineonRacer-master\src)* 를 복사 또는 이동 하거나
+    * 새로 만든 Workspace에 *src* 폴더 *(~\AurixRacer-master\src)* 를 복사 또는 이동 하거나
     * *src* 폴더를 Workspace로 지정
 
  ![GettingStarted_05Workspace](images/GettingStarted_05Workspace.png)
 
-* 다운로드 받은  *InfineonRacer* 프로젝트 Import
+* 다운로드 받은  *AurixRacer* 프로젝트 Import
     * **File** >> **Import** 클릭
 
  ![GettingStarted_06Import](images/GettingStarted_06Import.png)
@@ -140,8 +144,8 @@ date: 2018-04-10
 
  ![GettingStarted_08Select](images/GettingStarted_08Select.png)
 
-* *Projects* 탭에서 **InfineonRacer_TC23A** 체크박스 선택 후 **Finish** 클릭
-    * 다른 프로젝트는 *InfineonRacer* 에서 다루는 각각의 [모듈기능](https://github.com/realsosy/InfineonRacer#dive-into-aurix-world-using-infineonracer) 으로 나누어져 있음
+* *Projects* 탭에서 **AurixRacer_TC27D** 체크박스 선택 후 **Finish** 클릭
+    * 다른 프로젝트는 *AurixRacer* 에서 다루는 각각의 [모듈기능](https://github.com/realsosy/InfineonRacer#dive-into-aurix-world-using-infineonracer) 으로 나누어져 있음
 
  ![GettingStarted_09Project](images/GettingStarted_09Project.png)  
 
