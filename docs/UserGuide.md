@@ -373,7 +373,7 @@ BasicModule 의 시험과 관련되는 파일들을 /AppSw/Tricore/Main 디렉�
 
 위와 같은 경우에서는 Release 디렉토리 밑에 있는 파일들과 /Main 디렉토리 이외에 있는 다른 모든 소스코드들이 결합되어 실행파일, `AurixRacer_SB_TC27D_Tc.elf` 파일을 만들게 된다.  최종 실행파일의 위치와 이름이 변경되지 않았으므로 디버거의 설정도 변경할 필요 없이 동일하게 사용할 수 있는 장점을 갖게 된다.
 
-![UserGuide_SelectionBranches](D:/GitRepo/AurixRacer/docs/images/UserGuide_SelectionBranches.png)
+![UserGuide_SelectionBranches](./images/UserGuide_SelectionBranches.png)
 
 
 
@@ -397,7 +397,7 @@ AurixRacer에서 이 두 보드를 모두 지원할 수 있도록 형상관리�
 
 * **BIFACE**에서 Build 할 수 있도록 Config.xml 파일에 다음의 항목을 추가해 준다.
 
-![UserGuide_ConfigFile](D:\GitRepo\AurixRacer\docs\images\UserGuide_ConfigFile.png)
+![UserGuide_ConfigFile](.\images\UserGuide_ConfigFile.png)
 
 ```xml
 <!-- 이전 생략 -->
