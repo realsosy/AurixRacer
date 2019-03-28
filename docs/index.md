@@ -30,7 +30,7 @@ Software Platform를 분석하면 자연스럽게 Infineon AURIX를 이해할 �
 
 시중에서 쉽게 구할 수 있는 DC Motor Driver를 활용하도록 변경하였습니다.
 
-* [DC Motor Control Shield with BTN8982TA](https://www.infineon.com/cms/en/product/evaluation-boards/dc-motorcontr_btn8982/)
+* [DC Motor Control Shield with IFX007T](https://www.infineon.com/cms/en/product/evaluation-boards/bldc-shield_ifx007t/)
 
 ### Links
 
