@@ -8,7 +8,7 @@ date: 2018-01-30
 
 ## Components
 *   Microcontroller board: [ShieldBuddy_TC275](http://www.hitex.co.uk/embedded-technology/hardware/boards-modules/embedded-modules-by-processor/hitex-shieldbuddy-tc275/)
-*   Motor Driver: [DC Motor Control Shield with BTN8982TA](https://www.infineon.com/cms/en/product/evaluation-boards/dc-motorcontr_btn8982/)
+*   Motor Driver: [DC Motor Control Shield with IFX007T](<https://www.infineon.com/cms/en/product/evaluation-boards/bldc-shield_ifx007t/>)
 *   DC Motor included in Kit
 *   Servo motor for steering included in Kit
 

@@ -149,7 +149,7 @@ date: 2018-04-10
 
  ![GettingStarted_09Project](images/GettingStarted_09Project.png)  
 
-* *Project Explorer* 를 통해 Import 된 프로젝트를 확인할 수 있음 (Welcom 창은 닫으면 됨)
+* *Project Explorer* 를 통해 Import 된 프로젝트를 확인할 수 있음 (Welcome 창은 닫으면 됨)
 
  ![GettingStarted_10Explorer](images/GettingStarted_10Explorer.png)
 
