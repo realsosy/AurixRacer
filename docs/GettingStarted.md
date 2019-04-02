@@ -3,8 +3,6 @@ title: Getting Started.md
 author: Kyungpyo Kim (kyungpyo94@naver.com)  
 date: 2018-04-10
 ---
-[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/docs/GettingStarted.md)](https://github.com/realsosy/aurixracer)
-
 # Getting Started
 
 ## Objectives
@@ -475,3 +473,5 @@ date: 2018-04-10
 
     * 설치된 백신 프로그램(ex. 알약)을 종료시키고 **BIFACES** 를 다시 설치
     * 다시 *php.exe* 파일을 실행하여 실행이 되는지 확인 후 다시 빌드 실행
+
+[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/docs/GettingStarted.md?pixel)](https://github.com/realsosy/aurixracer)
