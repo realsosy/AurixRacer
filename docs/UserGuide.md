@@ -3,8 +3,6 @@ title: AurixRacer User Guide
 author: Wootaik Lee (wootaik@gmail.com)  
 date: 2018-01-30
 ---
-[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/docs/UserGuide.md)](https://github.com/realsosy/aurixracer)
-
 # AurixRacer User Guide
 
 ## Objectives
@@ -577,3 +575,6 @@ AurixRacer에서 이 두 보드를 모두 지원할 수 있도록 형상관리�
 * Graphic 출력
 * Touch Screen 제공
 * 필요에 따사 사용자가 사용할 수 있는 Text 창과 Graph 창 제공
+
+[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/docs/UserGuide.md?pixel)](https://github.com/realsosy/aurixracer)
+
