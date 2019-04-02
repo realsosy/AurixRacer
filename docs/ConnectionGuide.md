@@ -3,7 +3,7 @@ title: Connection Guide for Infineon Racer
 author: Wootaik Lee (wootaik@gmail.com)  
 date: 2018-01-30
 ---
-
+[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/docs/ConnectionGuide.md)](https://github.com/realsosy/aurixracer)
 # Connection Guide
 
 ## Components
