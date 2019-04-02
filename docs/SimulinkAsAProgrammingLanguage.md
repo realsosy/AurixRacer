@@ -3,6 +3,7 @@ title: Simulink As a Programming Language
 author: Kyunghan Min (kyunghah.min@gmail.com)
 date: 2018-05-04
 ---
+[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/docs/SimulinkAsAProgrammingLanguage.md)](https://github.com/realsosy/aurixracer)
 
 # Simulink as a programming language
 
