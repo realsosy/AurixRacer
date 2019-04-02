@@ -3,6 +3,7 @@ title: AurixRacer User Guide
 author: Wootaik Lee (wootaik@gmail.com)  
 date: 2018-01-30
 ---
+[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/docs/UserGuide.md)](https://github.com/realsosy/aurixracer)
 
 # AurixRacer User Guide
 
