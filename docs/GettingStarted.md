@@ -3,6 +3,7 @@ title: Getting Started.md
 author: Kyungpyo Kim (kyungpyo94@naver.com)  
 date: 2018-04-10
 ---
+[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/docs/GettingStarted.md)](https://github.com/realsosy/aurixracer)
 
 # Getting Started
 
