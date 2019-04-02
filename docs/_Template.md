@@ -3,6 +3,7 @@ title: _Template.md
 author: Gildong Hong (gildong@hong.com)  
 date: 2018-01-30
 ---
+[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/docs/_Template.md)](https://github.com/realsosy/aurixracer)
 
 # _Template for Infineon Racer
 
