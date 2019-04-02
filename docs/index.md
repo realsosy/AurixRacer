@@ -3,6 +3,7 @@ title: index.md
 author: Wootaik Lee (wootaik@gmail.com)  
 date: 2019-01-30
 ---
+[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/docs/Index.md)](https://github.com/realsosy/aurixracer)
 
 ## Purpose & Scope
 지능형 모형차 대회에 사용할 수 있는 Software Platform 을 제공하는 것을 목적으로 합니다.
