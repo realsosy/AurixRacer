@@ -1,3 +1,5 @@
+[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer/README.md)](https://github.com/realsosy/aurixracer)
+
 # [AurixRacer](./docs/index.md)
 ## Purpose & Scope
 
@@ -16,4 +18,4 @@
 - ApplicationKit_TC237
 - ShieldBuddy_TC275D
 
-[![Analytics](https://ga-beacon.appspot.com/UA-137501847-1/AurixRacer)](https://github.com/realsosy/aurixracer)
+
