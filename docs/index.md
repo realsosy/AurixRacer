@@ -76,7 +76,7 @@ Software Platform를 분석하면 자연스럽게 Infineon AURIX를 이해할 �
 3. [Simulink as a Programming Language](./SimulinkAsAProgrammingLanguage.md)
 
 - [Connection Guide for AurixRacer](./ConnectionGuide.md)
-- [Pins & API](./docs/PinsApi.xlsx)
+- [Pins & API](../docs/PinsApi.xlsx)
 
 
 
