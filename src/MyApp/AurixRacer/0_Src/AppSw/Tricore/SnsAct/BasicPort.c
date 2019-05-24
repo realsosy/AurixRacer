@@ -120,10 +120,10 @@ void BasicPort_init(void)
 	setOutputPin(M_INH_W.port, M_INH_W.pinIndex, IR_Port.m_inh_w);
 	
 	/* Analog Input */
-	IfxPort_setPinModeInput(IfxPort_P33_10.port, IfxPort_P33_10.pinIndex, IfxPort_InputMode_pullDown);
-	IfxPort_setPinModeInput(IfxPort_P33_11.port, IfxPort_P33_11.pinIndex, IfxPort_InputMode_noPullDevice);
-	IfxPort_setPinModeInput(IfxPort_P20_7.port, IfxPort_P20_7.pinIndex, IfxPort_InputMode_noPullDevice);
-	IfxPort_setPinModeInput(IfxPort_P20_8.port, IfxPort_P20_8.pinIndex, IfxPort_InputMode_noPullDevice);
+	IfxPort_setPinModeInput(VADC_0.port, VADC_0.pinIndex, IfxPort_InputMode_pullDown);
+	IfxPort_setPinModeInput(VADC_1.port, VADC_1.pinIndex, IfxPort_InputMode_noPullDevice);
+	IfxPort_setPinModeInput(VADC_2.port, VADC_2.pinIndex, IfxPort_InputMode_noPullDevice);
+	IfxPort_setPinModeInput(VADC_3.port, VADC_3.pinIndex, IfxPort_InputMode_noPullDevice);
 #endif
 
 	/* Digital Input */
