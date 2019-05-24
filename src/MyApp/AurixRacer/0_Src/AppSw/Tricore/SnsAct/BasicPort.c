@@ -118,6 +118,12 @@ void BasicPort_init(void)
     IfxPort_setPinMode(M_INH_W.port, M_INH_W.pinIndex, IfxPort_Mode_outputPushPullGeneral);
 	IfxPort_setPinPadDriver(M_INH_W.port, M_INH_W.pinIndex, IfxPort_PadDriver_cmosAutomotiveSpeed1);
 	setOutputPin(M_INH_W.port, M_INH_W.pinIndex, IR_Port.m_inh_w);
+	
+	/* Analog Input */
+	IfxPort_setPinModeInput(IfxPort_P33_10.port, IfxPort_P33_10.pinIndex, IfxPort_InputMode_pullDown);
+	IfxPort_setPinModeInput(IfxPort_P33_11.port, IfxPort_P33_11.pinIndex, IfxPort_InputMode_noPullDevice);
+	IfxPort_setPinModeInput(IfxPort_P20_7.port, IfxPort_P20_7.pinIndex, IfxPort_InputMode_noPullDevice);
+	IfxPort_setPinModeInput(IfxPort_P20_8.port, IfxPort_P20_8.pinIndex, IfxPort_InputMode_noPullDevice);
 #endif
 
 	/* Digital Input */
