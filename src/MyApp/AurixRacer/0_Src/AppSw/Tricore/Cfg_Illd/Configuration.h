@@ -17,16 +17,16 @@
 #include <_PinMap/IfxScu_PinMap.h>
 #include <_PinMap/IfxGtm_PinMap.h>
 
-/* APPLICATION_KIT_TC237 È¤Àº SHIELD_BUDDY Áß¿¡ ÇÑ°¡Áö¸¸ ¼±ÅÃ*/
+/* APPLICATION_KIT_TC237 í˜¹ì€ SHIELD_BUDDY ì¤‘ì— í•œê°€ì§€ë§Œ ì„ íƒ*/
 #define APPLICATION_KIT_TC237 	1
 #define SHIELD_BUDDY 			2
 
-/* SHELL_ASCLIN assign, ASCLIN0 È¤Àº ASCLIN3 Áß¿¡ ÇÑ°¡Áö¸¸ ¼±ÅÃ */
+/* SHELL_ASCLIN assign, ASCLIN0 í˜¹ì€ ASCLIN3 ì¤‘ì— í•œê°€ì§€ë§Œ ì„ íƒ */
 #define ASCLIN0			0		// For HC06 Bluetooth module
 #define ASCLIN3			3		// For USB
 #define SHELL_ASCLIN	ASCLIN3
 
-/* ´ÙÀ½ 3°³ÁßÀÇ ÇÏ³ª¸¸ Á¤ÀÇÇØ¼­ »ç¿ë*/
+/* ë‹¤ìŒ 3ê°œì¤‘ì˜ í•˜ë‚˜ë§Œ ì •ì˜í•´ì„œ ì‚¬ìš©*/
 #define CODE_HAND	0		// Hand code : default
 #define CODE_ERT	1		// Using embedded coder
 #define CODE_SCILAB	2		// Using SciLab
@@ -163,6 +163,11 @@
 	#define TSL1401_CLK					IfxPort_P14_1
 	#define TSL1401_AO_1				0
 	#define TSL1401_AO_2				1
+
+	#define VADC_0						IfxPort_P33_10
+	#define VADC_1						IfxPort_P33_11
+	#define VADC_2						IfxPort_P20_7
+	#define VADC_3						IfxPort_P20_8
 
 	/* Encoder Emulation for Gpt12Enc Test */
 //	#define ENCODER_EMUL
